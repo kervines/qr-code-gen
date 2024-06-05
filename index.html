@@ -13,15 +13,27 @@
 </head>
 
 <body>
-  <div class="hero">
-    <h1>Gen <small>qr</small>Code</h1>
-    <p>Geração de qrCode</p>
-  </div>
+
   <div class="container">
+    <div class="hero">
+      <h1>Gen <small>qr</small>Code</h1>
+      <p>Geração de qrCode</p>
+    </div>
     <form action="">
       <div>
-        <label for="url">URL</label>
-        <input type="text" id="url" placeholder="Insira sua url">
+        <div class="url-container">
+          <label for="url">URL</label>
+          <input type="text" id="url" placeholder="Insira sua url">
+        </div>
+        <div class="colors">
+          <label for="bg">Background</label>
+          <input type="color" name="" id="bg">
+          <label for="fill">Fill</label>
+          <input type="color" value="#fff" name="" id="fill">
+        </div>
+        <div class="size">
+          <input type="number" min="100" placeholder="Tamanho em pixel" id="size">
+        </div>
       </div>
       <input type="submit" value="Gerar">
     </form>
@@ -29,7 +41,7 @@
       <div id="qrcode">
         <i class="fa-solid fa-qrcode"></i>
       </div>
-      <button>Download</button>
+      <button disabled>Download</button>
     </div>
   </div>
 </body>

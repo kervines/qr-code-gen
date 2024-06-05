@@ -7,13 +7,21 @@
   font-family: 'Rubik', sans-serif;
 }
 
-html {
+.hero {
+  color: #1b4900;
+}
+small {
+  color: #1b4900;
+  background-color: rgb(179, 255, 160);
+  width: 35px;
+  text-align: end;
+  display: inline-block;
 }
 
 .container {
   height: 80vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding: 1rem;
   align-items: center;
   justify-content: center;
@@ -21,8 +29,10 @@ html {
 }
 
 .container form {
+  padding: 0.5rem;
   display: flex;
   position: relative;
+  border: 1px solid #b1b1b1;
   border-radius: 10px;
   box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.2);
 }
@@ -30,11 +40,12 @@ html {
 .container form p {
   position: absolute;
   font-size: 1rem;
-  bottom: -1.5rem;
+  font-weight: bold;
+  top: -20px;
   left: 0rem;
 }
 
-.container form label {
+.container .url-container label {
   display: none;
 }
 
@@ -51,31 +62,40 @@ input[type='text'] {
 }
 input[type='submit'] {
   cursor: pointer;
+  font-weight: 500;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  background-color: rgb(179, 255, 160);
+  color: #1b4900;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem;
+  gap: 4px;
 }
 
 .container-qrcode {
-  width: 300px;
-  height: 400px;
-  box-shadow: 2px 2px 1px 2px rgba(102, 51, 153, 0.2);
+  min-width: 320px;
+  min-height: 400px;
+  padding: 1rem 2rem;
+  box-shadow: 2px 2px 1px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: rgb(102, 51, 153);
 }
 
 #qrcode i {
   font-size: 200px;
-  color: #fafafa;
+  color: #e2e2e2;
 }
 
 .container button {
-  background-color: #fafafa;
-  color: #333;
+  background-color: #e2e2e2;
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1.125rem;
