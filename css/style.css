@@ -8,13 +8,20 @@
 }
 
 .hero {
-  padding: 1rem;
+  color: #1b4900;
+}
+small {
+  color: #1b4900;
+  background-color: rgb(179, 255, 160);
+  width: 35px;
+  text-align: end;
+  display: inline-block;
 }
 
 .container {
   height: 80vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding: 1rem;
   align-items: center;
   justify-content: center;
@@ -22,8 +29,10 @@
 }
 
 .container form {
+  padding: 0.5rem;
   display: flex;
   position: relative;
+  border: 1px solid #b1b1b1;
   border-radius: 10px;
   box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.2);
 }
@@ -31,11 +40,12 @@
 .container form p {
   position: absolute;
   font-size: 1rem;
-  bottom: -1.5rem;
+  font-weight: bold;
+  top: -20px;
   left: 0rem;
 }
 
-.container form label {
+.container .url-container label {
   display: none;
 }
 
@@ -55,11 +65,21 @@ input[type='submit'] {
   font-weight: 500;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  background-color: rgb(179, 255, 160);
+  color: #1b4900;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem;
+  gap: 4px;
 }
 
 .container-qrcode {
-  width: 300px;
-  height: 400px;
+  min-width: 320px;
+  min-height: 400px;
+  padding: 1rem 2rem;
   box-shadow: 2px 2px 1px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
