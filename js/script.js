@@ -5,15 +5,6 @@ const inputURL = document.getElementById('url');
 let stateQRCode = true;
 formEl.addEventListener('submit', (e) => {
   e.preventDefault();
-  qrcodeEl.innerHTML = '';
-
-  const qrcode = new QRCode(qrcodeEl, {
-    width: 200,
-    height: 200,
-    colorDark: '#fafafa',
-    colorLight: '#663399',
-    correctLevel: QRCode.CorrectLevel.H,
-  });
 
   const url = `https://${inputURL.value}`;
 
@@ -26,6 +17,14 @@ formEl.addEventListener('submit', (e) => {
       formEl.removeChild(p);
     }, 2000);
   } else {
+    qrcodeEl.innerHTML = '';
+    const qrcode = new QRCode(qrcodeEl, {
+      width: 200,
+      height: 200,
+      colorDark: '#000',
+      colorLight: '#fff',
+      correctLevel: QRCode.CorrectLevel.H,
+    });
     qrcode.makeCode(url);
   }
 });
